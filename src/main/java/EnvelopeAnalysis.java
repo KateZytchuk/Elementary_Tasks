@@ -7,10 +7,10 @@
 
 public class EnvelopeAnalysis {
 
-    public  static String getAnalysis() {
+    public  static String getAnalysis(double [] dimentions) {
         String result = "";
-
+        //TODO;
         return result;
     }
-    
+
 }
