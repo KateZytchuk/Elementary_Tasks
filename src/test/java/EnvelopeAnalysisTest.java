@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
@@ -8,5 +10,9 @@ import static org.junit.Assert.*;
  */
 
 public class EnvelopeAnalysisTest {
+    @Test(expected = IllegalArgumentException.class)
+    public void zeroInputTest()
+    {
 
+    }
 }

@@ -6,4 +6,11 @@
  */
 
 public class EnvelopeAnalysis {
+
+    public  static String getAnalysis() {
+        String result = "";
+
+        return result;
+    }
+    
 }
