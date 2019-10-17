@@ -66,5 +66,5 @@ public class EnvelopeAnalysisTest {
         EnvelopeAnalysis.getAnalysis(allNegativeCheck);
     }
 
-    
+
 }
