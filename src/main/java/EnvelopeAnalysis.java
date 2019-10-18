@@ -10,8 +10,8 @@ public class EnvelopeAnalysis {
     public  static String getAnalysis(double firstWidth, double firstLength,
                                       double secondWidth, double secondLength){
         String result = "";
-        if((firstWidth == secondWidth) || (firstLength == secondLength)
-            || (firstLength == secondWidth) || (firstWidth == secondLength)){
+        if((firstWidth == secondWidth) && (firstLength == secondLength)
+            || (firstLength == secondWidth) && (firstWidth == secondLength)){
             result = "Your envelopes are equal so, you can`t put one envelope to another";
         }
         else  if (((firstWidth > secondWidth) && (firstLength > secondLength))

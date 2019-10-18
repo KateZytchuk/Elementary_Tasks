@@ -4,6 +4,8 @@
     <list default="true" id="00fbc84b-bdf0-40e1-bec1-028581a998a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EnvelopeAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnvelopeAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EnvelopeAnalysisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EnvelopeAnalysisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.EnvelopeAnalysisTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ElementaryTasks" />
@@ -60,8 +62,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EnvelopeAnalysisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ElementaryTasks" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EnvelopeAnalysisTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EnvelopeAnalysisTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -77,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571306718531</updated>
       <workItem from="1571306724824" duration="7164000" />
-      <workItem from="1571390356344" duration="2908000" />
+      <workItem from="1571390356344" duration="5000000" />
     </task>
     <servers />
   </component>
