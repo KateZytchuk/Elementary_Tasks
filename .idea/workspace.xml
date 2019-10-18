@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="00fbc84b-bdf0-40e1-bec1-028581a998a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EnvelopeAnalysisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EnvelopeAnalysisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EnvelopeAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnvelopeAnalysis.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,19 +76,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571306718531</updated>
-      <workItem from="1571306724824" duration="6923000" />
+      <workItem from="1571306724824" duration="7164000" />
+      <workItem from="1571390356344" duration="1607000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

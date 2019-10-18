@@ -7,9 +7,14 @@
 
 public class EnvelopeAnalysis {
 
-    public  static String getAnalysis(double [] dimentions) {
+    public  static String getAnalysis(double firstWidth, double firstLength,
+                                      double secondWidth, double secondLength) {
         String result = "";
-        //TODO;
+        if((firstWidth == secondWidth) || (firstLength == secondLength)
+            || (firstLength == secondWidth) || (firstWidth == secondLength)){
+            result = "You can`t put one envelope to another";
+        }
+        
         return result;
     }
 
