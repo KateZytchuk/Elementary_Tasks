@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Created by IntelliJ IDEA.
  * USER: zaets39
@@ -7,6 +9,7 @@
 
 public class Program {
     public static void main(String[] args) {
-            EnvelopeAnalysis.inputDementions();
+            EnvelopeAnalysis.similizeEnvelopes();
     }
+
 }

@@ -9,53 +9,83 @@ import java.util.Scanner;
 
 public class EnvelopeAnalysis {
 
-    public  static String getAnalysis(double firstWidth, double firstLength,
-                                      double secondWidth, double secondLength)
+    private final static String FIRST_TO_SECOND  = "You can put your first envelope to second";
+    private final static String SECOND_TO_FIRST = "You can put your second envelope to first";
+    private final static String CANNOT_PUT = "You can`t put your one envelope to another";
+    private final static  String EQUAL_ENVELOPES = "Your envelopes are equal so, you can`t put one envelope to another";
+
+    public static void similizeEnvelopes() {
+        String choice;
+        Scanner in = new Scanner(System.in);
+        do{
+            inputDimensions();
+            System.out.println("Would you like to continue?");
+            choice = in.nextLine();
+        }while(choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes"));
+    }
+
+    public static int getAnalysis(Envelope first, Envelope second)
                                     throws IllegalArgumentException{
 
-        String result = "";
+        int result;
 
-        if(firstWidth <= 0 || firstLength <= 0 || secondWidth <=0
-                || secondLength <=0){
+        if(first.getWidth() <= 0 || first.getLength() <= 0
+                || second.getWidth() <=0 || second.getLength() <=0){
             throw  new IllegalArgumentException();
         }
 
-        if((firstWidth == secondWidth) && (firstLength == secondLength)
-            || (firstLength == secondWidth) && (firstWidth == secondLength)){
-            result = "Your envelopes are equal so, you can`t put one envelope to another";
+        if((first.getWidth() == second.getWidth()) && (first.getLength() == second.getLength())
+            || (first.getLength() == second.getWidth()) && (first.getWidth() == second.getLength())){
+            result = 0;
         }
-        else  if (((firstWidth > secondWidth) && (firstLength > secondLength))
-                ||((firstWidth > secondLength) && (firstLength > secondWidth))){
-            result = "You can put your second envelope to first";
+        else  if (((first.getWidth() > second.getWidth()) && (first.getLength() > second.getLength()))
+                ||((first.getWidth() > second.getLength()) && (first.getLength() > second.getWidth()))){
+            result = 2;
         }
-        else if (((secondWidth > firstWidth) && (secondLength > firstLength)) ||
-                ((secondWidth > firstLength)&&(secondLength > firstWidth))){
-            result = "You can put your first envelope to second";
+        else if (((second.getWidth() > first.getWidth()) && (second.getLength() > first.getLength())) ||
+                ((second.getWidth() > first.getLength())&&(second.getLength() > first.getWidth()))){
+            result = 1;
         }
         else{
-            result = "You can`t put your one envelope to another";
+            result = -1;
         }
         return result;
     }
-    public static void inputDementions()
+    public static void inputDimensions()
     {
         double firstWidth, firstLength, secondWidth, secondLength;
-        String answer;
-        Scanner in = new Scanner(System.in);
+        int answer;
         try {
-            System.out.println("Enter the width of first envelope: ");
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter the width of first envelope:");
             firstWidth = Double.parseDouble(in.nextLine());
-            System.out.println("Enter the length of first envelope: ");
+            System.out.println("Enter the length of first envelope:");
             firstLength = Double.parseDouble(in.nextLine());
-            System.out.println("Enter the width of second envelope: ");
+            System.out.println("Enter the width of second envelope:");
             secondWidth = Double.parseDouble(in.nextLine());
-            System.out.println("Enter the length of second envelope: ");
+            System.out.println("Enter the length of second envelope:");
             secondLength = Double.parseDouble(in.nextLine());
-            answer = getAnalysis(firstWidth, firstLength, secondWidth, secondLength);
-            System.out.println(answer);
+            in.close();
+            Envelope first = new Envelope(firstWidth, firstLength);
+            Envelope second = new Envelope(secondWidth, secondLength);
+            answer = getAnalysis(first, second);
+            switch (answer){
+                case 0:
+                    System.out.println(EQUAL_ENVELOPES);
+                    break;
+                case 1:
+                    System.out.println(FIRST_TO_SECOND);
+                    break;
+                case 2:
+                    System.out.println(SECOND_TO_FIRST);
+                    break;
+                case -1:
+                    System.out.println(CANNOT_PUT);
+                    break;
+            }
         } catch (Exception ex)
         {
-            //TODO;
+            System.out.println("Not a number!");
         }
     }
 }

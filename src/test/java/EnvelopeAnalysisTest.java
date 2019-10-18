@@ -19,90 +19,120 @@ public class EnvelopeAnalysisTest {
     @Test(expected = IllegalArgumentException.class)
     public void getAnalysisAllZeroNumsTest()
     {
-        EnvelopeAnalysis.getAnalysis(0, 0, 0, 0);
+        Envelope first = new Envelope(0, 0);
+        Envelope second = new Envelope(0, 0);
+        EnvelopeAnalysis.getAnalysis(first, second);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void getAnalysisTwoZeroNumsTest()
     {
-        EnvelopeAnalysis.getAnalysis(0, 6, 0, 5);
+        Envelope first = new Envelope(0, 6);
+        Envelope second = new Envelope(0, 5);
+        EnvelopeAnalysis.getAnalysis(first, second);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void getAnalysisThreeZeroNumsTest()
     {
-        EnvelopeAnalysis.getAnalysis(0, 0, 0, 5);
+        Envelope first = new Envelope(0, 0);
+        Envelope second = new Envelope(0, 5);
+        EnvelopeAnalysis.getAnalysis(first, second);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void getAnalysisOneZeroNumTest()
     {
-        EnvelopeAnalysis.getAnalysis(0, 3, 4, 5);
+        Envelope first = new Envelope(0, 3);
+        Envelope second = new Envelope(4, 5);
+        EnvelopeAnalysis.getAnalysis(first, second);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void getAnalysisOneNegativeNumTest()
     {
-        EnvelopeAnalysis.getAnalysis(-5, 8, 42, 5);
+        Envelope first = new Envelope(-5, 8);
+        Envelope second = new Envelope(42, 5);
+        EnvelopeAnalysis.getAnalysis(first, second);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void getAnalysisTwoNegativeNumsTest()
     {
-        EnvelopeAnalysis.getAnalysis(-8, -34, 6, 25);
+        Envelope first = new Envelope(-8, -34);
+        Envelope second = new Envelope(6, 25);
+        EnvelopeAnalysis.getAnalysis(first, second);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void getAnalysisThreeNegativeNumsTest()
     {
-        EnvelopeAnalysis.getAnalysis(-8, -34, 6, -65);
+        Envelope first = new Envelope(-8, -34);
+        Envelope second = new Envelope(6, -65);
+        EnvelopeAnalysis.getAnalysis(first, second);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void getAnalysisAllNegativeNumsTest()
     {
-        EnvelopeAnalysis.getAnalysis(-8, -34, -6, -12);
+        Envelope first = new Envelope(-8, -34);
+        Envelope second = new Envelope(-6, -12);
+        EnvelopeAnalysis.getAnalysis(first, second);
     }
     @Test
     public void firstInSecondTest_1()
     {
-        String  actual = EnvelopeAnalysis.getAnalysis(2.0, 2.2, 3.0, 2.8);
-        assertEquals(FIRST_TO_SECOND, actual);
+        Envelope first = new Envelope(2.0, 2.2);
+        Envelope second = new Envelope(3.0, 2.8);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(1, actual);
     }
     @Test
     public void firstInSecondTest_2()
     {
-        String  actual = EnvelopeAnalysis.getAnalysis(4.0, 1.8, 2.1, 4.9);
-        assertEquals(FIRST_TO_SECOND, actual);
+        Envelope first = new Envelope(4.0, 1.8);
+        Envelope second = new Envelope(2.1, 4.9);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(1, actual);
     }
     @Test
     public void secondInFirstTest_1()
     {
-        String  actual = EnvelopeAnalysis.getAnalysis(3.25, 3.5, 3.0, 2.45);
-        assertEquals(SECOND_TO_FIRST, actual);
+        Envelope first = new Envelope(3.25, 3.5);
+        Envelope second = new Envelope(3.0, 2.45);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(2, actual);
     }
     @Test
     public void secondInFirstTest_2()
     {
-        String  actual = EnvelopeAnalysis.getAnalysis(3.0, 6.0, 4.0, 2.0);
-        assertEquals(SECOND_TO_FIRST, actual);
+        Envelope first = new Envelope(3.0, 6.0);
+        Envelope second = new Envelope(4.0, 2.0);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(2, actual);
     }
     @Test
     public void identicalEnvelopesTest_1()
     {
-        String  actual = EnvelopeAnalysis.getAnalysis(3.95, 2.85, 3.95, 2.85);
-        assertEquals(EQUAL_ENVELOPES, actual);
+        Envelope first = new Envelope(3.95, 2.85);
+        Envelope second = new Envelope(3.95, 2.85);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(0, actual);
     }
     @Test
     public void identicalEnvelopesTest_2()
     {
-        String  actual = EnvelopeAnalysis.getAnalysis(5.8, 4.23, 4.23, 5.8);
-        assertEquals(EQUAL_ENVELOPES, actual);
+        Envelope first = new Envelope(5.8, 4.23);
+        Envelope second = new Envelope(4.23, 5.8);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(0, actual);
     }
     @Test
     public void cannotBePutTest()
     {
-        String  actual = EnvelopeAnalysis.getAnalysis(5.1, 6.0, 5.2, 6.0);
-        assertEquals(CANNOT_PUT, actual);
+        Envelope first = new Envelope(5.1, 6.0);
+        Envelope second = new Envelope(5.2, 6.0);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(-1, actual);
     }
 }
