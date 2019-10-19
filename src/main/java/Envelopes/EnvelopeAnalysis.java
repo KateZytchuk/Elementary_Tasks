@@ -1,3 +1,5 @@
+package Envelopes;
+
 import java.util.Scanner;
 
 /**
@@ -12,7 +14,7 @@ public class EnvelopeAnalysis {
     private final static String FIRST_TO_SECOND  = "You can put your first envelope to second";
     private final static String SECOND_TO_FIRST = "You can put your second envelope to first";
     private final static String CANNOT_PUT = "You can`t put your one envelope to another";
-    private final static  String EQUAL_ENVELOPES = "Your envelopes are equal so, you can`t put one envelope to another";
+    private final static String EQUAL_ENVELOPES = "Your envelopes are equal so, you can`t put one envelope to another";
 
     public static void similizeEnvelopes() {
         String choice;
@@ -85,7 +87,7 @@ public class EnvelopeAnalysis {
             }
         } catch (Exception ex)
         {
-            System.out.println("Not a number!");
+            System.out.println("OOPS! Something went wrong.");
         }
     }
 }

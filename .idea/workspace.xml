@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00fbc84b-bdf0-40e1-bec1-028581a998a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EnvelopeAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnvelopeAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Envelope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Envelopes/Envelope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EnvelopeAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Envelopes/EnvelopeAnalysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/EnvelopeAnalysisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EnvelopeAnalysisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EnvelopeAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EnvelopeAnalysis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/EnvelopeAnalysisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/EnvelopeAnalysisTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +99,8 @@
       <option name="presentableId" value="Default" />
       <updated>1571306718531</updated>
       <workItem from="1571306724824" duration="7164000" />
-      <workItem from="1571390356344" duration="13479000" />
+      <workItem from="1571390356344" duration="13917000" />
+      <workItem from="1571471059982" duration="1314000" />
     </task>
     <servers />
   </component>

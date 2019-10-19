@@ -1,3 +1,5 @@
+import Envelopes.Envelope;
+import Envelopes.EnvelopeAnalysis;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,11 +12,6 @@ import static org.junit.Assert.*;
  */
 
 public class EnvelopeAnalysisTest {
-
-    private final String FIRST_TO_SECOND  = "You can put your first envelope to second";
-    private final String SECOND_TO_FIRST = "You can put your second envelope to first";
-    private final String CANNOT_PUT = "You can`t put your one envelope to another";
-    private final String EQUAL_ENVELOPES = "Your envelopes are equal so, you can`t put one envelope to another";
 
     @Test(expected = IllegalArgumentException.class)
     public void getAnalysisAllZeroNumsTest()
