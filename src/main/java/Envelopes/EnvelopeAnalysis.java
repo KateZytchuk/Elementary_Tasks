@@ -1,5 +1,7 @@
 package Envelopes;
 
+import Validation.My_Validator;
+
 import java.util.Scanner;
 
 /**
@@ -24,6 +26,7 @@ public class EnvelopeAnalysis {
             System.out.println("Would you like to continue?");
             choice = in.nextLine();
         }while(choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes"));
+        in.close();
     }
 
     public static int getAnalysis(Envelope first, Envelope second)
@@ -87,7 +90,7 @@ public class EnvelopeAnalysis {
             }
         } catch (Exception ex)
         {
-            System.out.println("OOPS! Something went wrong.");
+            My_Validator.printExceptionMessage();
         }
     }
 }

@@ -15,4 +15,8 @@ public class My_Validator {
             //TODO;
         }
     }
+    public static void printExceptionMessage()
+    {
+        System.out.println("OOPS! Something went wrong!");
+    }
 }

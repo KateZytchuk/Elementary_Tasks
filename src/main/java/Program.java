@@ -10,8 +10,8 @@ import chessBoard.ChessOperations;
 
 public class Program {
     public static void main(String[] args) {
-          //  EnvelopeAnalysis.similizeEnvelopes();
-        ChessOperations.createChessDesc(5, 6);
+        EnvelopeAnalysis.similizeEnvelopes();
+        ChessOperations.getBoard();
     }
 
 }
