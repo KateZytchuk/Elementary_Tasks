@@ -1,4 +1,5 @@
 import Envelopes.EnvelopeAnalysis;
+import chessBoard.ChessOperations;
 
 /**
  * Created by IntelliJ IDEA.
@@ -9,7 +10,8 @@ import Envelopes.EnvelopeAnalysis;
 
 public class Program {
     public static void main(String[] args) {
-            EnvelopeAnalysis.similizeEnvelopes();
+          //  EnvelopeAnalysis.similizeEnvelopes();
+        ChessOperations.createChessDesc(5, 6);
     }
 
 }

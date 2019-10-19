@@ -7,17 +7,17 @@ package chessBoard;
  * TIME: 13:19
  */
 
-public class Chess {
+public class ChessDesk {
     private int width;
     private int length;
 
-    public Chess(int width, int length)
-    {
+    public ChessDesk(int width, int length) {
         this.width = width;
         this.length = length;
     }
 
     public void setWidth(int width) {
+
         this.width = width;
     }
 
@@ -26,6 +26,7 @@ public class Chess {
     }
 
     public void setLength(int length) {
+
         this.length = length;
     }
 
