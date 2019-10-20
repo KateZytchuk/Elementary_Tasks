@@ -23,7 +23,7 @@ public class ChessOperations
         }while (choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes"));
         in.close();
     }
-    static void createChessDesc(ChessDesk desk){
+    static char[] [] createChessDesc(ChessDesk desk){
         My_Validator.validateChessDimentions(desk.getLength(), desk.getWidth());
         int length = desk.getLength();
         int width = desk.getWidth();
@@ -31,14 +31,15 @@ public class ChessOperations
         for(int i=0; i<length; i++){
             for(int j=0; j<width; j++){
                 if((i+j)%2==0){
-                    board[i][j]=42;
+                    board[i][j]='*';
                 }
                 else {
-                    board[i][j]=32;
+                    board[i][j]=' ';
                 }
             }
         }
         printChessDesc(board);
+        return board;
     }
      static void printChessDesc(char [][] desc)
     {

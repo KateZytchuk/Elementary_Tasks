@@ -12,7 +12,7 @@ public class My_Validator {
     {
         if(length<=0 || width<=0)
         {
-            //TODO;
+            throw new IllegalArgumentException();
         }
     }
     public static void printExceptionMessage()
