@@ -1,5 +1,7 @@
 package NumericalSequence;
 
+import java.util.ArrayList;
+
 /**
  * Created by IntelliJ IDEA.
  * USER: zaets39
@@ -8,4 +10,6 @@ package NumericalSequence;
  */
 
 public class My_Number {
+    ArrayList<Integer> numbersInSequence = new ArrayList<Integer>();
+
 }

@@ -1,7 +1,6 @@
-import Envelopes.Envelope;
-import Envelopes.EnvelopeAnalysis;
-import org.junit.Test;
+package Envelopes;
 
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
