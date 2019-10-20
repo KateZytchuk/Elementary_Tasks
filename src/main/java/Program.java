@@ -1,5 +1,8 @@
 import Envelopes.EnvelopeAnalysis;
+import Validation.My_Validator;
 import chessBoard.ChessOperations;
+
+import java.util.Scanner;
 
 /**
  * Created by IntelliJ IDEA.
@@ -9,12 +12,21 @@ import chessBoard.ChessOperations;
  */
 
 public class Program {
+
     public static void main(String[] args) {
-        EnvelopeAnalysis.similizeEnvelopes();
-        ChessOperations.getBoard();
+        String choice;
+        Scanner in = new Scanner(System.in);
+        do{
+            showMenu();
+            System.out.println("Would you like to continue?");
+            choice = in.nextLine();
+        }while(choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes"));
+        in.close();
     }
 
     static void showMenu(){
+        Scanner in = new Scanner(System.in);
+        int number;
         System.out.println("Choose the program you want to execute:");
         System.out.println("1)Chess Board");
         System.out.println("2)Envelopes Analysis");
@@ -26,5 +38,55 @@ public class Program {
         System.out.println("8)Fibonacci series for range");
         System.out.println("9)Exponentiation");
         System.out.println("10)Storage");
+        try{
+            number =  Integer.parseInt(in.nextLine());
+            startChosenProgram(number);
+        }
+        catch (Exception ex)
+        {
+            My_Validator.printExceptionMessage();
+        }
+    }
+    static void startChosenProgram(int number)
+    {
+        switch (number){
+            case 1:
+                ChessOperations.getBoard();
+                break;
+            case 2:
+                EnvelopeAnalysis.similizeEnvelopes();
+                break;
+            case 3:
+                showMessage();
+                break;
+            case 4:
+                showMessage();
+                break;
+            case 5:
+                showMessage();
+                break;
+            case 6:
+                showMessage();
+                break;
+            case 7:
+                showMessage();
+                break;
+            case 8:
+                showMessage();
+                break;
+            case 9:
+                showMessage();
+                break;
+            case 10:
+                showMessage();
+                break;
+            default:
+                My_Validator.printExceptionMessage();
+                break;
+        }
+    }
+    static void showMessage()
+    {
+        System.out.println("Sorry, not implemented yet:(");
     }
 }
