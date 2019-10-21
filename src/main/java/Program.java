@@ -58,7 +58,7 @@ public class Program {
                 EnvelopeAnalysis.similizeEnvelopes();
                 break;
             case 3:
-                My_Number.inputNumber();
+                showMessage();
                 break;
             case 4:
                 showMessage();
@@ -70,7 +70,7 @@ public class Program {
                 showMessage();
                 break;
             case 7:
-                showMessage();
+                My_Number.inputNumber();
                 break;
             case 8:
                 showMessage();

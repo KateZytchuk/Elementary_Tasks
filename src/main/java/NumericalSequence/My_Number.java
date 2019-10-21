@@ -13,15 +13,21 @@ import java.util.Scanner;
 
 public class My_Number {
     public static void inputNumber() {
+        String choice;
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter your number");
-        int input = Integer.parseInt(in.next());
-        if (My_Validator.sequenceInputValidate(input)) {
-            int[] numbersSequence = findNumbers(input);
-            printSequence(numbersSequence);
-        } else {
-            My_Validator.printExceptionMessage();
-        }
+        do {
+            System.out.println("Enter your number");
+            int input = Integer.parseInt(in.next());
+            if (My_Validator.sequenceInputValidate(input)) {
+                int[] numbersSequence = findNumbers(input);
+                printSequence(numbersSequence);
+            } else {
+                My_Validator.printExceptionMessage();
+            }
+            System.out.println("DO you want to continue?");
+            choice = in.nextLine();
+        } while (choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes"));
+        in.close();
     }
 
     static int[] findNumbers(int number) {
