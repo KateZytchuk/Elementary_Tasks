@@ -16,6 +16,6 @@ public class FibonacciSeries {
 
      List findInRange(int start, int end)
     {
-        
+        return inRangeFibonacci;
     }
 }
