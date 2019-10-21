@@ -1,4 +1,4 @@
-package chessBoard;
+package chess_board;
 
 import org.junit.Test;
 

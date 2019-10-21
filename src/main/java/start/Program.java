@@ -3,7 +3,7 @@ package start;
 import Envelopes.EnvelopeAnalysis;
 import numerical_sequence.MyNumber;
 import Validation.My_Validator;
-import chessBoard.ChessOperations;
+import chess_board.ChessOperations;
 
 import java.util.Scanner;
 import java.util.logging.Logger;

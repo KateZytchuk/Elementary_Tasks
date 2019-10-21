@@ -1,4 +1,4 @@
-package chessBoard;
+package chess_board;
 
 /**
  * Created by IntelliJ IDEA.
