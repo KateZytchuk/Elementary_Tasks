@@ -1,4 +1,6 @@
-package Validation;
+package validation;
+
+import java.util.logging.Logger;
 
 /**
  * Created by IntelliJ IDEA.
@@ -7,7 +9,12 @@ package Validation;
  * TIME: 15:25
  */
 
-public class My_Validator {
+public class MyValidator {
+
+    private static final Logger LOGGER = Logger.getLogger(MyValidator.class.getName());
+
+    private MyValidator(){}
+
     public static void validateChessDimentions(int length, int width) {
         if (length <= 0 || width <= 0) {
             throw new IllegalArgumentException();
@@ -15,14 +22,10 @@ public class My_Validator {
     }
 
     public static void printExceptionMessage() {
-        System.out.println("OOPS! Something went wrong!");
+        LOGGER.info("OOPS! Something went wrong!");
     }
 
     public static boolean sequenceInputValidate(int number) {
-        if (number <= 1) {
-            return false;
-        } else {
-            return true;
-        }
+        return (number<=1)? false:true;
     }
 }

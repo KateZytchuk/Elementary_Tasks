@@ -1,8 +1,9 @@
-package Envelopes;
+package envelopes;
 
-import Validation.My_Validator;
+import validation.MyValidator;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * Created by IntelliJ IDEA.
@@ -13,17 +14,21 @@ import java.util.Scanner;
 
 public class EnvelopeAnalysis {
 
-    private final static String FIRST_TO_SECOND  = "You can put your first envelope to second";
-    private final static String SECOND_TO_FIRST = "You can put your second envelope to first";
-    private final static String CANNOT_PUT = "You can`t put your one envelope to another";
-    private final static String EQUAL_ENVELOPES = "Your envelopes are equal so, you can`t put one envelope to another";
+    private static final Logger LOGGER = Logger.getLogger(EnvelopeAnalysis.class.getName());
+
+    private static final  String FIRST_TO_SECOND  = "You can put your first envelope to second";
+    private static final String SECOND_TO_FIRST = "You can put your second envelope to first";
+    private static final String CANNOT_PUT = "You can`t put your one envelope to another";
+    private static final String EQUAL_ENVELOPES = "Your envelopes are equal so, you can`t put one envelope to another";
+
+    private EnvelopeAnalysis(){}
 
     public static void similizeEnvelopes() {
         String choice;
         Scanner in = new Scanner(System.in);
         do{
             inputDimensions();
-            System.out.println("Would you like to continue?");
+            LOGGER.info("Would you like to continue?");
             choice = in.nextLine();
         }while(choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes"));
         in.close();
@@ -58,17 +63,20 @@ public class EnvelopeAnalysis {
     }
     public static void inputDimensions()
     {
-        double firstWidth, firstLength, secondWidth, secondLength;
+        double firstWidth;
+        double firstLength;
+        double secondWidth;
+        double secondLength;
         int answer;
         try {
             Scanner in = new Scanner(System.in);
-            System.out.println("Enter the width of first envelope:");
+            LOGGER.info("Enter the width of first envelope:");
             firstWidth = Double.parseDouble(in.nextLine());
-            System.out.println("Enter the length of first envelope:");
+            LOGGER.info("Enter the length of first envelope:");
             firstLength = Double.parseDouble(in.nextLine());
-            System.out.println("Enter the width of second envelope:");
+            LOGGER.info("Enter the width of second envelope:");
             secondWidth = Double.parseDouble(in.nextLine());
-            System.out.println("Enter the length of second envelope:");
+            LOGGER.info("Enter the length of second envelope:");
             secondLength = Double.parseDouble(in.nextLine());
             in.close();
             Envelope first = new Envelope(firstWidth, firstLength);
@@ -76,21 +84,23 @@ public class EnvelopeAnalysis {
             answer = getAnalysis(first, second);
             switch (answer){
                 case 0:
-                    System.out.println(EQUAL_ENVELOPES);
+                    LOGGER.info(EQUAL_ENVELOPES);
                     break;
                 case 1:
-                    System.out.println(FIRST_TO_SECOND);
+                    LOGGER.info(FIRST_TO_SECOND);
                     break;
                 case 2:
-                    System.out.println(SECOND_TO_FIRST);
+                    LOGGER.info(SECOND_TO_FIRST);
                     break;
                 case -1:
-                    System.out.println(CANNOT_PUT);
+                    LOGGER.info(CANNOT_PUT);
+                    break;
+                default:
                     break;
             }
         } catch (Exception ex)
         {
-            My_Validator.printExceptionMessage();
+            MyValidator.printExceptionMessage();
         }
     }
 }

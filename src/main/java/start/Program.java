@@ -1,8 +1,8 @@
 package start;
 
-import Envelopes.EnvelopeAnalysis;
+import envelopes.EnvelopeAnalysis;
 import numerical_sequence.MyNumber;
-import Validation.My_Validator;
+import validation.MyValidator;
 import chess_board.ChessOperations;
 
 import java.util.Scanner;
@@ -40,7 +40,7 @@ public class Program {
             number = Integer.parseInt(in.nextLine());
             startChosenProgram(number);
         } catch (Exception ex) {
-            My_Validator.printExceptionMessage();
+            MyValidator.printExceptionMessage();
         }
     }
 

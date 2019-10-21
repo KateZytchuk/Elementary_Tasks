@@ -1,4 +1,4 @@
-package Envelopes;
+package envelopes;
 
 /**
  * Created by IntelliJ IDEA.

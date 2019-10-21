@@ -1,6 +1,6 @@
 package chess_board;
 
-import Validation.My_Validator;
+import validation.MyValidator;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -30,7 +30,7 @@ public class ChessOperations {
     }
 
     static char[][] createChessDesc(ChessDesk desk) {
-        My_Validator.validateChessDimentions(desk.getLength(), desk.getWidth());
+        MyValidator.validateChessDimentions(desk.getLength(), desk.getWidth());
         int length = desk.getLength();
         int width = desk.getWidth();
         char[][] board = new char[length][width];
@@ -66,7 +66,7 @@ public class ChessOperations {
             ChessDesk desk = new ChessDesk(length, width);
             createChessDesc(desk);
         } catch (Exception ex) {
-            My_Validator.printExceptionMessage();
+            MyValidator.printExceptionMessage();
         }
     }
 }

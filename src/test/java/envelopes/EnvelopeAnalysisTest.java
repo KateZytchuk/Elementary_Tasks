@@ -1,4 +1,4 @@
-package Envelopes;
+package envelopes;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
