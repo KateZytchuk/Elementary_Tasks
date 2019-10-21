@@ -61,4 +61,5 @@ public class Triangle {
     public void setSquare(double square) {
         this.square = square;
     }
+
 }
