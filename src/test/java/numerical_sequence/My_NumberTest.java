@@ -1,6 +1,5 @@
-package NumericalSequence;
+package numerical_sequence;
 
-import Validation.My_Validator;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

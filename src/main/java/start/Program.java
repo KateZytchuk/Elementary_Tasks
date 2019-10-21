@@ -1,7 +1,7 @@
 package start;
 
 import Envelopes.EnvelopeAnalysis;
-import NumericalSequence.My_Number;
+import numerical_sequence.MyNumber;
 import Validation.My_Validator;
 import chessBoard.ChessOperations;
 
@@ -50,7 +50,7 @@ public class Program {
         } else if (number == 2) {
             EnvelopeAnalysis.similizeEnvelopes();
         } else if (number == 7) {
-            My_Number.inputNumber();
+            MyNumber.inputNumber();
         } else {
             showMessage();
         }

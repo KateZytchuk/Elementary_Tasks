@@ -1,8 +1,9 @@
-package NumericalSequence;
+package numerical_sequence;
 
 import Validation.My_Validator;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,12 +12,17 @@ import java.util.Scanner;
  * TIME: 15:55
  */
 
-public class My_Number {
+public class MyNumber {
+    private static final Logger LOGGER = Logger.getLogger(MyNumber.class.getName());
+
+    private MyNumber() {
+    }
+
     public static void inputNumber() {
         String choice;
         Scanner in = new Scanner(System.in);
         do {
-            System.out.println("Enter your number");
+            LOGGER.info("Enter your number");
             int input = Integer.parseInt(in.nextLine());
             if (My_Validator.sequenceInputValidate(input)) {
                 int[] numbersSequence = findNumbers(input);
@@ -24,10 +30,10 @@ public class My_Number {
             } else {
                 My_Validator.printExceptionMessage();
             }
-            System.out.println("DO you want to continue?");
+            LOGGER.info("DO you want to continue?");
             choice = in.nextLine();
             in.close();
-        } while (choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes"));
+        } while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes"));
 
     }
 
@@ -42,7 +48,8 @@ public class My_Number {
 
     static void printSequence(int[] sequence) {
         for (int i = 0; i < sequence.length; i++) {
-            System.out.println(i + "\t");
+            String temp = Integer.toString(sequence[i]);
+            LOGGER.info(temp);
         }
     }
 }
