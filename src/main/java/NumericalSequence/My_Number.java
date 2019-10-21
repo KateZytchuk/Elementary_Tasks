@@ -17,7 +17,7 @@ public class My_Number {
         Scanner in = new Scanner(System.in);
         do {
             System.out.println("Enter your number");
-            int input = Integer.parseInt(in.next());
+            int input = Integer.parseInt(in.nextLine());
             if (My_Validator.sequenceInputValidate(input)) {
                 int[] numbersSequence = findNumbers(input);
                 printSequence(numbersSequence);
@@ -26,8 +26,9 @@ public class My_Number {
             }
             System.out.println("DO you want to continue?");
             choice = in.nextLine();
+            in.close();
         } while (choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes"));
-        in.close();
+
     }
 
     static int[] findNumbers(int number) {
