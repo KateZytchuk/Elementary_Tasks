@@ -1,4 +1,5 @@
 import Envelopes.EnvelopeAnalysis;
+import NumericalSequence.My_Number;
 import Validation.My_Validator;
 import chessBoard.ChessOperations;
 
@@ -57,7 +58,7 @@ public class Program {
                 EnvelopeAnalysis.similizeEnvelopes();
                 break;
             case 3:
-                showMessage();
+                My_Number.inputNumber();
                 break;
             case 4:
                 showMessage();
