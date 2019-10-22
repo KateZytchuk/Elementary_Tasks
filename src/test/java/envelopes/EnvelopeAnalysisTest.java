@@ -160,8 +160,8 @@ public class EnvelopeAnalysisTest {
     @Test
     public void diagonalTest_4()
     {
-        Envelope first = new Envelope(9, 9);
-        Envelope second = new Envelope(1, 10);
+        Envelope first = new Envelope(10, 10);
+        Envelope second = new Envelope(1, 13);
         int actual =EnvelopeAnalysis.getAnalysis(first, second);
         assertEquals(3, actual);
     }

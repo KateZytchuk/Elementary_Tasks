@@ -64,11 +64,7 @@ public class EnvelopeAnalysis {
     }
 
     private static boolean putOnDiagonal(double a, double b, double c, double d){
-        double H;
-        double W;
-        double h;
-        double w;
-        double temp;
+        double H, W, h, w, temp, formulaLeft, formulaRight;
             if(Math.abs(a-b) > Math.abs(c-d))
             {
                 H = c;
@@ -88,8 +84,7 @@ public class EnvelopeAnalysis {
         temp = Math.max(h, w);
         h = Math.min(h, w);
         w = temp;
-        double formulaRight = (w * w - h * h);
-        double formulaLeft;
+        formulaRight = (w * w - h * h);
         double repeatedExpr = w * w + h * h;
         formulaLeft = (H * Math.sqrt(repeatedExpr - W * W)) + (W * Math.sqrt(repeatedExpr - H * H));
         if (formulaLeft <= formulaRight) {
