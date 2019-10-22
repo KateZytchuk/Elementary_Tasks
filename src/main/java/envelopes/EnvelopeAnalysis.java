@@ -1,6 +1,5 @@
 package envelopes;
 
-import triangle_square.Triangle;
 import validation.MyValidator;
 
 import java.util.Scanner;
