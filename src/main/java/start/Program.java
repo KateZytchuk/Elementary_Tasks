@@ -2,6 +2,7 @@ package start;
 
 import envelopes.EnvelopeAnalysis;
 import numerical_sequence.MyNumber;
+import triangle_square.TriangleSort;
 import validation.MyValidator;
 import chess_board.ChessOperations;
 
@@ -51,6 +52,8 @@ public class Program {
             EnvelopeAnalysis.similizeEnvelopes();
         } else if (number == 7) {
             MyNumber.inputNumber();
+        } else if (number == 3) {
+            TriangleSort.inputData();
         } else {
             showMessage();
         }

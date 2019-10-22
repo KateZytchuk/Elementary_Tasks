@@ -50,9 +50,9 @@ public class ChessOperations {
     static void printChessDesc(char[][] desc) {
         for (int i = 0; i < desc.length; i++) {
             for (int j = 0; j < desc[i].length; j++) {
-                String temp = Integer.toString(desc[i][j]);
-                LOGGER.info(temp);
+                System.out.print(desc[i][j]+ "\t"); // Google how to print symbols in loggers
             }
+            System.out.println();
         }
     }
 

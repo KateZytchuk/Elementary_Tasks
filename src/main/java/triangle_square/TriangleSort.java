@@ -15,6 +15,7 @@ public class TriangleSort {
 
     public static void inputData()
     {
+        System.out.println("Sorry not ready yet!");
         Scanner in = new Scanner(System.in);
         String choice;
         do{

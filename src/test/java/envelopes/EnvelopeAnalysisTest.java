@@ -123,11 +123,53 @@ public class EnvelopeAnalysisTest {
         int actual =EnvelopeAnalysis.getAnalysis(first, second);
         assertEquals(0, actual);
     }
+
     @Test
     public void cannotBePutTest()
     {
         Envelope first = new Envelope(5.1, 6.0);
         Envelope second = new Envelope(5.2, 6.0);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(-1, actual);
+    }
+
+    @Test
+    public void diagonalTest()
+    {
+        Envelope first = new Envelope(10, 1);
+        Envelope second = new Envelope(9, 9);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(3, actual);
+    }
+    @Test
+    public void diagonalTest_2()
+    {
+        Envelope first = new Envelope(9, 9);
+        Envelope second = new Envelope(10, 1);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(3, actual);
+    }
+    @Test
+    public void diagonalTest_3()
+    {
+        Envelope first = new Envelope(1, 10);
+        Envelope second = new Envelope(9, 9);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(3, actual);
+    }
+    @Test
+    public void diagonalTest_4()
+    {
+        Envelope first = new Envelope(9, 9);
+        Envelope second = new Envelope(1, 10);
+        int actual =EnvelopeAnalysis.getAnalysis(first, second);
+        assertEquals(3, actual);
+    }
+    @Test
+    public void diagonalTest_5()
+    {
+        Envelope first = new Envelope(8, 7);
+        Envelope second = new Envelope(1, 10);
         int actual =EnvelopeAnalysis.getAnalysis(first, second);
         assertEquals(-1, actual);
     }
