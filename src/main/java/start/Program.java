@@ -1,20 +1,13 @@
 package start;
 
-import envelopes.EnvelopeAnalysis;
+import envelopes.services.EnvelopeAnalysis;
 import numerical_sequence.MyNumber;
 import triangle_square.TriangleSort;
-import validation.MyValidator;
+import validation.Validator;
 import chess_board.ChessOperations;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
-
-/**
- * Created by IntelliJ IDEA.
- * USER: zaets39
- * DATE: 17.10.2019
- * TIME: 13:06
- */
 
 public class Program {
     private static final Logger LOGGER = Logger.getLogger(Program.class.getName());
@@ -41,7 +34,7 @@ public class Program {
             number = Integer.parseInt(in.nextLine());
             startChosenProgram(number);
         } catch (Exception ex) {
-            MyValidator.printExceptionMessage();
+            Validator.printExceptionMessage();
         }
     }
 
@@ -49,7 +42,7 @@ public class Program {
         if (number == 1) {
             ChessOperations.getBoard();
         } else if (number == 2) {
-            EnvelopeAnalysis.similizeEnvelopes();
+            EnvelopeAnalysis.compareEnvelopes();
         } else if (number == 7) {
             MyNumber.inputNumber();
         } else if (number == 3) {

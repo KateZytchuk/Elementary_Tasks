@@ -1,5 +1,7 @@
 package envelopes;
 
+import envelopes.domain.Envelope;
+import envelopes.services.EnvelopeAnalysis;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

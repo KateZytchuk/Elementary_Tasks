@@ -1,8 +1,8 @@
 package triangle_square;
 
-import java.util.Scanner;
 
-import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
+import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * Created by IntelliJ IDEA.
@@ -13,9 +13,10 @@ import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 
 public class TriangleSort {
 
-    public static void inputData()
+    private static final java.util.logging.Logger LOGGER = Logger.getLogger(TriangleSort.class.getName());
+    public static void run()
     {
-        System.out.println("Sorry not ready yet!");
+        LOGGER.info("Sorry not ready yet!");
         Scanner in = new Scanner(System.in);
         String choice;
         do{
@@ -24,14 +25,22 @@ public class TriangleSort {
         }while(choice.equalsIgnoreCase("y")||choice.equalsIgnoreCase("yes"));
     }
 
+    public static void inputData() {
+
+    }
     private static double countByGeron(Triangle triangle) {
         double square = 0;
-        double halfPerimeter = (triangle.getFirstSide() + triangle.getSecondSide()
-                + triangle.getThirdSide()) / 2;
+        double halfPerimeter = countHalfPerimeter(triangle);
         double rootExpression = halfPerimeter * ((halfPerimeter - triangle.getFirstSide())
                 * (halfPerimeter - triangle.getSecondSide())
                 * (halfPerimeter - triangle.getThirdSide()));
         square = Math.sqrt(rootExpression);
         return square;
+    }
+    private static double countHalfPerimeter(Triangle triangle)
+    {
+        double halfPerimeter = (triangle.getFirstSide() + triangle.getSecondSide()
+                + triangle.getThirdSide()) / 2;
+        return halfPerimeter;
     }
 }

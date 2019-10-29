@@ -9,11 +9,11 @@ import java.util.logging.Logger;
  * TIME: 15:25
  */
 
-public class MyValidator {
+public class Validator {
 
-    private static final Logger LOGGER = Logger.getLogger(MyValidator.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Validator.class.getName());
 
-    private MyValidator(){}
+    private Validator(){}
 
     public static void validateChessDimentions(int length, int width) {
         if (length <= 0 || width <= 0) {

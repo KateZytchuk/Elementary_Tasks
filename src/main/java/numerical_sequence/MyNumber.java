@@ -1,6 +1,6 @@
 package numerical_sequence;
 
-import validation.MyValidator;
+import validation.Validator;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -24,16 +24,15 @@ public class MyNumber {
         do {
             LOGGER.info("Enter your number");
             int input = Integer.parseInt(in.nextLine());
-            if (MyValidator.sequenceInputValidate(input)) {
+            if (Validator.sequenceInputValidate(input)) {
                 int[] numbersSequence = findNumbers(input);
                 printSequence(numbersSequence);
             } else {
-                MyValidator.printExceptionMessage();
+                Validator.printExceptionMessage();
             }
             LOGGER.info("DO you want to continue?");
             choice = in.nextLine();
-            in.close();
-        } while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes"));
+        }while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes"));
 
     }
 
