@@ -16,11 +16,11 @@ public class IntegersSequence extends NumericalSequences {
     }
 
     public static void print() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int temp : integers) {
-            result += Integer.toString(temp) + ",\t";
+            result.append(temp).append(" ");
         }
-        result += "\n";
-        LOGGER.info(result);
+        String str = result.toString();
+        LOGGER.info(str);
     }
 }

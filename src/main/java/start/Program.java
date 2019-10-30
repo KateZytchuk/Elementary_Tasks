@@ -1,9 +1,8 @@
 package start;
 
 import envelopes.services.EnvelopeAnalysis;
-import numerical_sequence.MyNumber;
+import numerical_sequence.services.FindNumbers;
 import triangle_square.TriangleSort;
-import validation.Validator;
 import chess_board.ChessOperations;
 
 import java.util.Scanner;
@@ -14,8 +13,9 @@ public class Program {
 
     public static void main(String[] args) {
        // showMenu();
-        EnvelopeAnalysis temp = new EnvelopeAnalysis();
-        temp.compareEnvelopes();
+       /* EnvelopeAnalysis temp = new EnvelopeAnalysis();
+        temp.compareEnvelopes();*/
+       FindNumbers.inputNumber();
     }
 
     private static void showMenu() {
@@ -46,7 +46,7 @@ public class Program {
         } else if (number == 2) {
            // EnvelopeAnalysis.compareEnvelopes();
         } else if (number == 7) {
-            MyNumber.inputNumber();
+            FindNumbers.inputNumber();
         } else if (number == 3) {
             TriangleSort.inputData();
         } else {
