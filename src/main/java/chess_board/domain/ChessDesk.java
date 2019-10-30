@@ -1,6 +1,4 @@
-package chess_board;
-
-
+package chess_board.domain;
 
 public class ChessDesk {
     private int width;

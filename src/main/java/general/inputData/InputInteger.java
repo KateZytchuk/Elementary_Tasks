@@ -1,14 +1,14 @@
-package numerical_sequence.services;
+package general.inputData;
 
 import validation.Validator;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class InputNumber {
-    private static final Logger LOGGER = Logger.getLogger(InputNumber.class.getName());
+public class InputInteger {
+    private static final Logger LOGGER = Logger.getLogger(InputInteger.class.getName());
 
-    private InputNumber() {
+    private InputInteger() {
     }
 
     public static int inputData() {

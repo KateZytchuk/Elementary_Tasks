@@ -1,9 +1,8 @@
 package start;
 
-import envelopes.services.EnvelopeAnalysis;
 import numerical_sequence.services.FindNumbers;
 import triangle_square.TriangleSort;
-import chess_board.ChessOperations;
+import chess_board.services.ChessOperations;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -15,7 +14,8 @@ public class Program {
        // showMenu();
        /* EnvelopeAnalysis temp = new EnvelopeAnalysis();
         temp.compareEnvelopes();*/
-       FindNumbers.inputNumber();
+       //FindNumbers.inputNumber();
+        ChessOperations.getBoard();
     }
 
     private static void showMenu() {

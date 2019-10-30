@@ -17,8 +17,4 @@ public class Validator {
     public static void printParseExceptionMessage() {
         LOGGER.info("Can`t parse your input");
     }
-
-    public static boolean sequenceInputValidate(int number) {
-        return (number<=1)? false:true;
-    }
 }

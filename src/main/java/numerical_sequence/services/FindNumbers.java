@@ -1,5 +1,6 @@
 package numerical_sequence.services;
 
+import general.inputData.InputInteger;
 import numerical_sequence.console.OutputInfo;
 import numerical_sequence.domain.IntegersSequence;
 
@@ -18,7 +19,7 @@ public class FindNumbers {
         Scanner in = new Scanner(System.in);
         do {
             OutputInfo.numberMessage();
-            temp = InputNumber.inputData();
+            temp = InputInteger.inputData();
             findNumbers(temp);
             IntegersSequence.print();
             LOGGER.info("DO you want to continue?");
