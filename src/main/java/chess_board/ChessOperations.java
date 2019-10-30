@@ -30,7 +30,7 @@ public class ChessOperations {
     }
 
     static char[][] createChessDesc(ChessDesk desk) {
-        Validator.validateChessDimentions(desk.getLength(), desk.getWidth());
+     //   Validator.validateChessDimentions(desk.getLength(), desk.getWidth());
         int length = desk.getLength();
         int width = desk.getWidth();
         char[][] board = new char[length][width];

@@ -71,12 +71,12 @@ public class EnvelopeAnalysis {
 
     private static boolean putOnDiagonal(Envelope first, Envelope second) {
         double H, W, h, w, temp, formulaLeft, formulaRight;
-        Envelope.orderTwoEnvelopes(first, second);
-        temp = Math.max(first.getLength(), first.getWidth());
-        H = Math.min(first.getLength(), first.getWidth());
+        Envelope tempArr[] = Envelope.orderTwoEnvelopes(first, second);
+        temp = Math.max(tempArr[0].getWidth(), tempArr[0].getLength());
+        H = Math.min(tempArr[0].getLength(), tempArr[0].getWidth());
         W = temp;
-        temp = Math.max(second.getLength(), second.getWidth());
-        h = Math.min(second.getLength(), second.getWidth());
+        temp = Math.max(tempArr[1].getLength(), tempArr[1].getWidth());
+        h = Math.min(tempArr[1].getLength(), tempArr[1].getWidth());
         w = temp;
         formulaRight = (w * w - h * h);
         double repeatedExpr = w * w + h * h;

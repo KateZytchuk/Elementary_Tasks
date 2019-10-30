@@ -20,6 +20,7 @@ public class InputDimensions {
             } catch (NumberFormatException ex) {
                 Validator.printParseExceptionMessage();
             } catch (IllegalArgumentException ex) {
+                Validator.printParseExceptionMessage();
                 LOGGER.info(ex.getMessage());
             }
         } while (temp <= 0);

@@ -8,7 +8,7 @@ public class Validator {
 
     private Validator(){}
 
-    public static void validateChessDimentions(int length, int width) {
+    public static void validateChessDimensions(int length, int width) {
         if (length <= 0 || width <= 0) {
             throw new IllegalArgumentException();
         }
