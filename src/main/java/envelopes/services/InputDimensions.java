@@ -18,10 +18,9 @@ public class InputDimensions {
             try {
                 temp = Double.parseDouble(input.nextLine());
             } catch (NumberFormatException ex) {
-                Validator.printParseExceptionMessage();
+                LOGGER.info("NumberFormatException");
             } catch (IllegalArgumentException ex) {
                 Validator.printParseExceptionMessage();
-                LOGGER.info(ex.getMessage());
             }
         } while (temp <= 0);
         return temp;
