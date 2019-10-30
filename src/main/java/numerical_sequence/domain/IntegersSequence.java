@@ -14,6 +14,9 @@ public class IntegersSequence extends NumericalSequences {
     public static void add(int number) {
         integers.add(number);
     }
+    public static void clear(){
+        integers.clear();
+    }
 
     public static void print() {
         StringBuilder result = new StringBuilder();

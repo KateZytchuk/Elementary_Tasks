@@ -7,33 +7,17 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ChessOperationsTest {
-
-/*    @Test (expected = IllegalArgumentException.class)
-    public void createChessDesc_allZeroInputTest() {
-        ChessDesk myDesk = new ChessDesk(0, 0);
-        ChessOperations.createChessDesc(myDesk);
-    }
-    @Test (expected = IllegalArgumentException.class)
-    public void createChessDesc_lengthZeroInputTest() {
-        ChessDesk myDesk = new ChessDesk(0, 5);
-        ChessOperations.createChessDesc(myDesk);
-    }
-    @Test (expected = IllegalArgumentException.class)
-    public void createChessDesc_widthZeroInputTest() {
-        ChessDesk myDesk = new ChessDesk(5, 0);
-        ChessOperations.createChessDesc(myDesk);
-    }
-    @Test (expected = IllegalArgumentException.class)
+    @Test (expected = NegativeArraySizeException.class)
     public void createChessDesc_allNegativeInputTest() {
         ChessDesk myDesk = new ChessDesk(-5, -8);
         ChessOperations.createChessDesc(myDesk);
     }
-    @Test (expected = IllegalArgumentException.class)
+    @Test (expected = NegativeArraySizeException.class)
     public void createChessDesc_lengthNegativeInputTest() {
         ChessDesk myDesk = new ChessDesk(-52, 5);
         ChessOperations.createChessDesc(myDesk);
     }
-    @Test (expected = IllegalArgumentException.class)
+    @Test (expected = NegativeArraySizeException.class)
     public void createChessDesc_widthNegativeInputTest() {
         ChessDesk myDesk = new ChessDesk(5, -9);
         ChessOperations.createChessDesc(myDesk);
@@ -117,5 +101,5 @@ public class ChessOperationsTest {
         expected[3][2]=' ';
         char[][] actual = ChessOperations.createChessDesc(myDesc);
         assertArrayEquals(expected, actual);
-    }*/
+    }
 }

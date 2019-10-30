@@ -30,6 +30,7 @@ public class FindNumbers {
 
     static void findNumbers(int number) {
         int temp = (int) Math.sqrt(number);
+        IntegersSequence.clear();
         for (int i = 0; i < temp; i++) {
             IntegersSequence.add(i + 1);
         }

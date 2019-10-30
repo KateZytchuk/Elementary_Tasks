@@ -19,8 +19,9 @@ public class ChessOperations {
         ChessDesk temp;
         do {
             temp = inputSize();
-            String resultBoard = createChessDesc(temp);
-            OutputData.printDesk(resultBoard);
+            char[][] resultBoard = createChessDesc(temp);
+            String result = createStringFromBoard(resultBoard);
+            OutputData.printDesk(result);
             QuestionsToUser.continueWork();
             choice = in.nextLine();
         } while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes"));
@@ -35,8 +36,7 @@ public class ChessOperations {
         return new ChessDesk(length, width);
     }
 
-    private static String createChessDesc(ChessDesk desk) {
-        String result;
+    public static char[][] createChessDesc(ChessDesk desk) {
         int length = desk.getLength();
         int width = desk.getWidth();
         char[][] board = new char[length][width];
@@ -49,8 +49,7 @@ public class ChessOperations {
                 }
             }
         }
-        result = createStringFromBoard(board);
-        return result;
+        return board;
     }
 
     private static String createStringFromBoard(char[][] desk) {

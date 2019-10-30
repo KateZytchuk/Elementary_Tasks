@@ -14,8 +14,8 @@ public class Program {
        // showMenu();
        /* EnvelopeAnalysis temp = new EnvelopeAnalysis();
         temp.compareEnvelopes();*/
-       //FindNumbers.inputNumber();
-        ChessOperations.getBoard();
+       FindNumbers.inputNumber();
+       // ChessOperations.getBoard();
     }
 
     private static void showMenu() {

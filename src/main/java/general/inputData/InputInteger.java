@@ -22,7 +22,7 @@ public class InputInteger {
             } catch (IllegalArgumentException ex) {
                 Validator.printParseExceptionMessage();
             }
-        } while (temp <= 1);
+        } while (temp <= 0);
         return temp;
     }
 }
