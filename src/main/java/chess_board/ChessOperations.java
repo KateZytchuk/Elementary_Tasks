@@ -66,7 +66,7 @@ public class ChessOperations {
             ChessDesk desk = new ChessDesk(length, width);
             createChessDesc(desk);
         } catch (Exception ex) {
-            Validator.printExceptionMessage();
+            //Validator.printExceptionMessage();
         }
     }
 }

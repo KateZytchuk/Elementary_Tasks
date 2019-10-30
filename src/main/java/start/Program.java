@@ -13,7 +13,8 @@ public class Program {
     private static final Logger LOGGER = Logger.getLogger(Program.class.getName());
 
     public static void main(String[] args) {
-        showMenu();
+       // showMenu();
+        EnvelopeAnalysis.compareEnvelopes();
     }
 
     private static void showMenu() {
@@ -34,7 +35,7 @@ public class Program {
             number = Integer.parseInt(in.nextLine());
             startChosenProgram(number);
         } catch (Exception ex) {
-            Validator.printExceptionMessage();
+            //Validator.printExceptionMessage();
         }
     }
 

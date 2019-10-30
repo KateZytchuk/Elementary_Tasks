@@ -2,13 +2,6 @@ package validation;
 
 import java.util.logging.Logger;
 
-/**
- * Created by IntelliJ IDEA.
- * USER: zaets39
- * DATE: 19.10.2019
- * TIME: 15:25
- */
-
 public class Validator {
 
     private static final Logger LOGGER = Logger.getLogger(Validator.class.getName());
@@ -21,8 +14,8 @@ public class Validator {
         }
     }
 
-    public static void printExceptionMessage() {
-        LOGGER.info("OOPS! Something went wrong!");
+    public static void printParseExceptionMessage() {
+        LOGGER.info("Can`t parse your input");
     }
 
     public static boolean sequenceInputValidate(int number) {

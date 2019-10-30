@@ -28,7 +28,7 @@ public class MyNumber {
                 int[] numbersSequence = findNumbers(input);
                 printSequence(numbersSequence);
             } else {
-                Validator.printExceptionMessage();
+              //  Validator.printExceptionMessage();
             }
             LOGGER.info("DO you want to continue?");
             choice = in.nextLine();
