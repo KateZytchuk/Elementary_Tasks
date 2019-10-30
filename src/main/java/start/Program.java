@@ -14,7 +14,8 @@ public class Program {
 
     public static void main(String[] args) {
        // showMenu();
-        EnvelopeAnalysis.compareEnvelopes();
+        EnvelopeAnalysis temp = new EnvelopeAnalysis();
+        temp.compareEnvelopes();
     }
 
     private static void showMenu() {
@@ -43,7 +44,7 @@ public class Program {
         if (number == 1) {
             ChessOperations.getBoard();
         } else if (number == 2) {
-            EnvelopeAnalysis.compareEnvelopes();
+           // EnvelopeAnalysis.compareEnvelopes();
         } else if (number == 7) {
             MyNumber.inputNumber();
         } else if (number == 3) {

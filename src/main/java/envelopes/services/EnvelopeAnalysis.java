@@ -9,10 +9,11 @@ import java.util.Scanner;
 
 public class EnvelopeAnalysis {
 
-    private EnvelopeAnalysis() {
+    public EnvelopeAnalysis() {
+        super();
     }
 
-    public static void compareEnvelopes() {
+    public  void compareEnvelopes() {
         String choice;
         Envelope[] envelopes;
         String result;
@@ -26,7 +27,7 @@ public class EnvelopeAnalysis {
         } while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes"));
     }
 
-    public static Envelope[] inputDimensions() {
+    private Envelope[] inputDimensions() {
         double firstWidth;
         double firstLength;
         double secondWidth;
@@ -45,7 +46,7 @@ public class EnvelopeAnalysis {
         return new Envelope[]{first, second};
     }
 
-    public static String analyze(Envelope first, Envelope second) {
+    public String analyze(Envelope first, Envelope second) {
         String result;
         double a = first.getLength();
         double b = first.getWidth();
@@ -69,7 +70,7 @@ public class EnvelopeAnalysis {
         return result;
     }
 
-    private static boolean putOnDiagonal(Envelope first, Envelope second) {
+    private boolean putOnDiagonal(Envelope first, Envelope second) {
         double H, W, h, w, temp, formulaLeft, formulaRight;
         Envelope tempArr[] = Envelope.orderTwoEnvelopes(first, second);
         temp = Math.max(tempArr[0].getWidth(), tempArr[0].getLength());
