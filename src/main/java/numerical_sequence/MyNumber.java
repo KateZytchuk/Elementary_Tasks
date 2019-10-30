@@ -5,13 +5,6 @@ import validation.Validator;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-/**
- * Created by IntelliJ IDEA.
- * USER: zaets39
- * DATE: 20.10.2019
- * TIME: 15:55
- */
-
 public class MyNumber {
     private static final Logger LOGGER = Logger.getLogger(MyNumber.class.getName());
 

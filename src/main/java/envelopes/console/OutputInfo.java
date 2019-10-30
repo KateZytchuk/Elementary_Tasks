@@ -3,6 +3,9 @@ package envelopes.console;
 import java.util.logging.Logger;
 
 public class OutputInfo {
+    private OutputInfo() {
+    }
+
     private static final Logger LOGGER = Logger.getLogger(OutputInfo.class.getName());
 
     public static void inputFirstWidth() {

@@ -1,11 +1,6 @@
 package chess_board;
 
-/**
- * Created by IntelliJ IDEA.
- * USER: zaets39
- * DATE: 19.10.2019
- * TIME: 13:19
- */
+
 
 public class ChessDesk {
     private int width;
