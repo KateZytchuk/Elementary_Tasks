@@ -1,7 +1,6 @@
 package envelopes.services;
 
 import common.output.Constants;
-import envelopes.console.InputForEnvelopes;
 import envelopes.console.OutputInfo;
 import envelopes.domain.Envelope;
 
@@ -13,18 +12,12 @@ public class EnvelopeAnalysis {
     public void run() {
         String choice;
         String result;
+        int number = 0;
         ArrayList<Envelope> envelopes;
         Scanner in = new Scanner(System.in);
         do {
-            int number = InputForEnvelopes.inputNumber(Constants.ENTER_NUMBER_OF_ENVELOPES);
-
+            number = Envelopes.getNumber(Constants.ENTER_NUMBER_OF_ENVELOPES);
             envelopes = Envelopes.getDimensions(Constants.ENVELOPE_MESSAGE, number);
-
-
-
-
-
-
             result = Envelopes.compare(envelopes);
             OutputInfo.showMessage(result);
             OutputInfo.showMessage(Constants.QUESTION_TO_USER);

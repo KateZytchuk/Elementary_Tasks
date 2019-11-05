@@ -4,6 +4,7 @@ import common.output.Constants;
 import envelopes.console.InputForEnvelopes;
 import envelopes.console.OutputInfo;
 import envelopes.domain.Envelope;
+import envelopes.validation.EnvelopesValidator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,16 +13,42 @@ public class Envelopes {
     private Envelopes() {
     }
 
+    public static int getNumber(String message) {
+        String numberOfEnvelopes;
+        int number = 0;
+        boolean flag;
+        EnvelopesValidator validator = new EnvelopesValidator();
+        do {
+            numberOfEnvelopes = InputForEnvelopes.inputNumber(Constants.ENTER_NUMBER_OF_ENVELOPES);
+            flag = validator.validateNumber(numberOfEnvelopes);
+            if (flag) {
+                number = Integer.parseInt(numberOfEnvelopes);
+            }
+        } while (!flag);
+        return number;
+    }
+
     public static ArrayList<Envelope> getDimensions(String message, int number) {
         InputForEnvelopes input = new InputForEnvelopes();
         ArrayList<Envelope> inputEnvelopes = new ArrayList<Envelope>();
+        EnvelopesValidator validator = new EnvelopesValidator();
+        String[] stringDimensions;
         Envelope envelope;
+        double width;
+        double length;
+        boolean flag;
         inputEnvelopes.clear();
         OutputInfo.showMessage(message);
-        for (int i = 0; i < number; i++) {
-            envelope = input.inputEnvelope(Constants.ENTER_DIMENSION);
-            inputEnvelopes.add(envelope);
-        }
+        do {
+            stringDimensions = input.inputEnvelope(Constants.ENTER_DIMENSION);
+            flag = validator.validEnvelope(stringDimensions);
+            if (flag) {
+                width = Double.parseDouble(stringDimensions[0]);
+                length = Double.parseDouble(stringDimensions[1]);
+                envelope = new Envelope(width, length);
+                inputEnvelopes.add(envelope);
+            }
+        } while (inputEnvelopes.size() < number);
         return inputEnvelopes;
     }
 

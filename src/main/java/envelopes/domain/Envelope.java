@@ -12,6 +12,14 @@ public class Envelope extends Container {
         return width;
     }
 
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
     public Envelope(double width, double length) {
         super();
         this.width = Math.min(width, length);
