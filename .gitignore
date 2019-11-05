@@ -1,5 +1,6 @@
 # IntellijIdea files
+*.class
 *.iml
-.idea
-out
-target
+/.idea
+/out
+/target
