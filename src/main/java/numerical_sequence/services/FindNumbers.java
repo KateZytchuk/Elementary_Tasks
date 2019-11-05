@@ -1,37 +1,40 @@
 package numerical_sequence.services;
 
-import common.inputData.InputInteger;
-//import common.output.QuestionsToUser;
-import numerical_sequence.console.OutputInfo;
-import numerical_sequence.domain.IntegersSequence;
+import common.input.InputNumber;
+import common.output.OutputInfo;
+import common.validation.Validator;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class FindNumbers {
 
     private FindNumbers() {
     }
 
-    public static void inputNumber() {
-        String choice;
-        int temp = 0;
-        Scanner in = new Scanner(System.in);
-        do {
-            OutputInfo.numberMessage();
-          //  temp = InputInteger.inputData();
-            findNumbers(temp);
-            IntegersSequence.print();
-           // QuestionsToUser.continueWork();
-            choice = in.nextLine();
-        } while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes"));
-
+    static String findNumbers(int number) {
+        int temp = (int) Math.sqrt(number);
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        for (int i = 1; i <= temp; i++) {
+            numbers.add(i);
+        }
+        return numbers.toString();
     }
 
-    static void findNumbers(int number) {
-        int temp = (int) Math.sqrt(number);
-        IntegersSequence.clear();
-        for (int i = 0; i < temp; i++) {
-            IntegersSequence.add(i + 1);
-        }
+    static void print(String sequence) {
+        OutputInfo.showMessage(sequence);
+    }
+
+    static int getNumber(String str) {
+        String numberString;
+        boolean flag;
+        int number = 0;
+        do {
+            numberString = InputNumber.inputNumber(str);
+            flag = Validator.validateNumber(numberString);
+            if (flag) {
+                number = Integer.parseInt(numberString);
+            }
+        } while (!flag);
+        return number;
     }
 }

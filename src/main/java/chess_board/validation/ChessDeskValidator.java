@@ -1,12 +1,11 @@
-package envelopes.validation;
+package chess_board.validation;
 
 import common.output.Constants;
 import common.output.OutputInfo;
 
-public class EnvelopesValidator {
-   private double[] doubles;
-
-    public boolean validEnvelope(String[] dimensions) {
+public class ChessDeskValidator {
+    private static int [] ints;
+    public  static boolean validateDimensions(String[] dimensions) {
         boolean isValidLength = dimensions.length == 2;
         if (!isValidLength) {
             OutputInfo.showMessage(Constants.ILLEGAL_INPUT);
@@ -14,12 +13,12 @@ public class EnvelopesValidator {
         return (isValidLength && isNumbers(dimensions) && isPositive());
     }
 
-    private boolean isNumbers(String[] str) {
-        doubles = new double[str.length];
+    private static boolean isNumbers(String[] str) {
+        ints = new int[str.length];
         boolean result = true;
         for (int i = 0; i < str.length; i++) {
             try {
-                doubles[i] = Double.parseDouble(str[i]);
+                ints[i] = Integer.parseInt(str[i]);
             } catch (NumberFormatException ex) {
                 OutputInfo.showMessage(Constants.NUMBER_FORMAT_EXCEPTION_MESSAGE);
                 result = false;
@@ -28,11 +27,11 @@ public class EnvelopesValidator {
         return result;
     }
 
-    private boolean isPositive() {
+    private static boolean isPositive() {
         int count = 0;
         boolean result;
-        for (int i = 0; i < doubles.length; i++) {
-            if (doubles[i] > 0) {
+        for (int anInt : ints) {
+            if (anInt > 0) {
                 count++;
             }
         }

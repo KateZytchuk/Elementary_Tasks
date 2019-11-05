@@ -1,6 +1,6 @@
 package envelopes.domain;
 
-public class Envelope extends Container {
+public class Envelope {
     private double width;
     private double length;
 
@@ -10,14 +10,6 @@ public class Envelope extends Container {
 
     public double getWidth() {
         return width;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
     }
 
     public Envelope(double width, double length) {

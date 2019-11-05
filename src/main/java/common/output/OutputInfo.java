@@ -1,4 +1,4 @@
-package envelopes.console;
+package common.output;
 
 import java.util.logging.Logger;
 

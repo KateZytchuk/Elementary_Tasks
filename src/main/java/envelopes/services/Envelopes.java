@@ -1,8 +1,10 @@
 package envelopes.services;
 
+import common.input.InputNumber;
 import common.output.Constants;
-import envelopes.console.InputForEnvelopes;
-import envelopes.console.OutputInfo;
+import common.validation.Validator;
+import common.input.InputNumbers;
+import common.output.OutputInfo;
 import envelopes.domain.Envelope;
 import envelopes.validation.EnvelopesValidator;
 
@@ -17,10 +19,9 @@ public class Envelopes {
         String numberOfEnvelopes;
         int number = 0;
         boolean flag;
-        EnvelopesValidator validator = new EnvelopesValidator();
         do {
-            numberOfEnvelopes = InputForEnvelopes.inputNumber(Constants.ENTER_NUMBER_OF_ENVELOPES);
-            flag = validator.validateNumber(numberOfEnvelopes);
+            numberOfEnvelopes = InputNumber.inputNumber(message);
+            flag = Validator.validateNumber(numberOfEnvelopes);
             if (flag) {
                 number = Integer.parseInt(numberOfEnvelopes);
             }
@@ -29,7 +30,7 @@ public class Envelopes {
     }
 
     public static ArrayList<Envelope> getDimensions(String message, int number) {
-        InputForEnvelopes input = new InputForEnvelopes();
+        InputNumbers input = new InputNumbers();
         ArrayList<Envelope> inputEnvelopes = new ArrayList<Envelope>();
         EnvelopesValidator validator = new EnvelopesValidator();
         String[] stringDimensions;
@@ -40,7 +41,7 @@ public class Envelopes {
         inputEnvelopes.clear();
         OutputInfo.showMessage(message);
         do {
-            stringDimensions = input.inputEnvelope(Constants.ENTER_DIMENSION);
+            stringDimensions = input.inputDimensions(Constants.ENTER_DIMENSION);
             flag = validator.validEnvelope(stringDimensions);
             if (flag) {
                 width = Double.parseDouble(stringDimensions[0]);
@@ -56,7 +57,7 @@ public class Envelopes {
         boolean result;
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < envelopes.size(); i++) {
-            output.append("\nYou can put in your ").append(i + 1).append(" envelope such envelopes: ");
+            output.append("\nYou can put in your ").append(i + 1).append(" envelope such envelopes:");
             for (int j = 0; j < envelopes.size(); j++) {
                 if (i != j) {
                     result = analyze(envelopes.get(i), envelopes.get(j));
@@ -69,7 +70,7 @@ public class Envelopes {
         return output.toString();
     }
 
-    public static boolean analyze(Envelope first, Envelope second) {
+    private static boolean analyze(Envelope first, Envelope second) {
         boolean notEquals = !((first.getLength() == second.getLength()) && (first.getWidth() == second.getWidth()));
 
         boolean cantFit = ((first.getLength() > second.getLength()) && (first.getWidth() > second.getWidth())

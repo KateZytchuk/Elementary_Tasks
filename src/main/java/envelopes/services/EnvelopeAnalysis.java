@@ -1,7 +1,7 @@
 package envelopes.services;
 
 import common.output.Constants;
-import envelopes.console.OutputInfo;
+import common.output.OutputInfo;
 import envelopes.domain.Envelope;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class EnvelopeAnalysis {
         ArrayList<Envelope> envelopes;
         Scanner in = new Scanner(System.in);
         do {
-            number = Envelopes.getNumber(Constants.ENTER_NUMBER_OF_ENVELOPES);
+            number = Envelopes.getNumber(Constants.ENTER_NUMBER);
             envelopes = Envelopes.getDimensions(Constants.ENVELOPE_MESSAGE, number);
             result = Envelopes.compare(envelopes);
             OutputInfo.showMessage(result);
