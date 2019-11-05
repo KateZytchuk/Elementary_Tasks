@@ -1,14 +1,13 @@
 package numerical_sequence.services;
 
-import general.inputData.InputInteger;
+import common.inputData.InputInteger;
+//import common.output.QuestionsToUser;
 import numerical_sequence.console.OutputInfo;
 import numerical_sequence.domain.IntegersSequence;
 
 import java.util.Scanner;
-import java.util.logging.Logger;
 
 public class FindNumbers {
-    private static final Logger LOGGER = Logger.getLogger(FindNumbers.class.getName());
 
     private FindNumbers() {
     }
@@ -19,10 +18,10 @@ public class FindNumbers {
         Scanner in = new Scanner(System.in);
         do {
             OutputInfo.numberMessage();
-            temp = InputInteger.inputData();
+          //  temp = InputInteger.inputData();
             findNumbers(temp);
             IntegersSequence.print();
-            LOGGER.info("DO you want to continue?");
+           // QuestionsToUser.continueWork();
             choice = in.nextLine();
         } while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes"));
 

@@ -1,6 +1,6 @@
-package general.inputData;
+package common.inputData;
 
-import validation.Validator;
+import common.validation.Validator;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -8,10 +8,7 @@ import java.util.logging.Logger;
 public class InputInteger {
     private static final Logger LOGGER = Logger.getLogger(InputInteger.class.getName());
 
-    private InputInteger() {
-    }
-
-    public static int inputData() {
+    public static int inputNumber(String message) {
         Scanner input = new Scanner(System.in);
         int temp = 0;
         do {
@@ -20,7 +17,7 @@ public class InputInteger {
             } catch (NumberFormatException ex) {
                 LOGGER.info("NumberFormatException");
             } catch (IllegalArgumentException ex) {
-                Validator.printParseExceptionMessage();
+              //  Validator.printParseExceptionMessage();
             }
         } while (temp <= 0);
         return temp;

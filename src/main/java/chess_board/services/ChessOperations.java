@@ -3,8 +3,8 @@ package chess_board.services;
 import chess_board.console.InfoForUser;
 import chess_board.console.OutputData;
 import chess_board.domain.ChessDesk;
-import general.inputData.InputInteger;
-import general.output.QuestionsToUser;
+import common.inputData.InputInteger;
+//import common.output.QuestionsToUser;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ public class ChessOperations {
     private ChessOperations() {
     }
 
-    public static void getBoard() {
+   /* public static void getBoard() {
         String choice;
         Scanner in = new Scanner(System.in);
         ChessDesk temp;
@@ -22,19 +22,19 @@ public class ChessOperations {
             char[][] resultBoard = createChessDesc(temp);
             String result = createStringFromBoard(resultBoard);
             OutputData.printDesk(result);
-            QuestionsToUser.continueWork();
+            //QuestionsToUser.continueWork();
             choice = in.nextLine();
         } while (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes"));
         in.close();
-    }
+    }*/
 
-    private static ChessDesk inputSize() {
+   /* private static ChessDesk inputSize() {
         InfoForUser.askForFirstDimension();
-        int length = InputInteger.inputData();
+       // int length = InputInteger.inputData();
         InfoForUser.askForSecondDimension();
-        int width = InputInteger.inputData();
-        return new ChessDesk(length, width);
-    }
+      //  int width = InputInteger.inputData();
+        //return new ChessDesk(length, width);
+    }*/
 
     public static char[][] createChessDesc(ChessDesk desk) {
         int length = desk.getLength();
