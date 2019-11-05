@@ -12,10 +12,11 @@ public class FindNumbers {
     }
 
     static String findNumbers(int number) {
-        int temp = (int) Math.sqrt(number);
         ArrayList<Integer> numbers = new ArrayList<Integer>();
-        for (int i = 1; i <= temp; i++) {
-            numbers.add(i);
+        for (int i = 1; i <= number; i++) {
+            if (Math.pow(i, 2) < number) {
+                numbers.add(i);
+            }
         }
         return numbers.toString();
     }
